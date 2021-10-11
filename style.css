@@ -22,16 +22,13 @@ p {
 }
 
 section {
-  padding: 20px;
+  padding: 10px;
 }
 
-section.alternate-background {
-  background-color: #00a699;
-  color: #fff;
-}
+
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -64,12 +61,20 @@ header {
   color: #fff;
 }
 
+nav ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
 header nav ul li {
   list-style-type: none;
 }
 
 header nav ul li a {
   color: #fff;
+  font-weight: "900";
   text-decoration: none;
   padding: 0 20px 0 0;
 }
@@ -81,6 +86,7 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  margin: 0 20px 10px 20px;
   border: 2px solid #ff385c;
   padding: 10px;
 }
@@ -93,6 +99,11 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
 }
 
 form button {
@@ -116,4 +127,131 @@ footer p {
   padding: 20px;
 }
 
+/* ------- About ------- */
+
+section.alternate-background {
+  background-color: #00a699;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  padding: 10px 50px;
+}
+
+.alternate-background img {
+  padding: 10px 0;
+}
+
+
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px){
+  /* -------  Navigation ------- */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0 20px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  nav ul{
+    display: flex;
+    padding-bottom: 0px;
+    margin: 0px;
+  }
+
+  /* -------  Search Form ------- */
+  form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  form select,
+  form input {
+    margin-bottom: 0px;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form button {
+    padding: 10px 25px;
+    width: auto;
+  }
+
+  /* ------- About ------- */
+
+  section.about {
+    padding: 10px 20px;
+  }
+
+  .about div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about img {
+    flex: 1;
+    height: 10%;
+    width: 10%;
+    padding-right: 10px;
+  }
+
+  .about p {
+    font-size: 12px;
+    flex: 2;
+    align-self: center;
+    /* padding: 10px 20px; */
+  }
+
+  /* ------ Ideas ------ */
+
+  .ideas {
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+  }
+
+  .ideas h2{
+    width: 100%;
+  }
+
+  .ideas div{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  /*  ------ Host ------ */
+
+  section.host {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .host img {
+    width: 50%;
+    padding: 10px 0 0 30px;
+  }
+
+  .host div p {
+    font-size: 12px;
+  }
+
+  .host-panel-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
