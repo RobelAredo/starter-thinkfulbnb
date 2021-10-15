@@ -25,26 +25,8 @@ section {
   padding: 10px;
 }
 
-
-
 main img {
   width: 100%;
-}
-
-/* ---  Groups & Items --- */
-
-.group {
-  display: flex;
-  flex-direction: column;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
 }
 
 /* -------  Navigation ------- */
@@ -52,12 +34,15 @@ main img {
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
+  margin: 0;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
+  font-weight: normal;
+  margin: 0;
   color: #fff;
 }
 
@@ -146,6 +131,20 @@ section.alternate-background {
 
 /* -------  Media Query ------- */
 
+@media all and (max-width: 390px){
+  .logo {
+    font-size: 17vw;
+  }
+}
+
+
+@media all and (max-width: 340px){
+  form input, 
+  form select {
+    width: 50%;
+  }
+}
+
 @media all and (min-width: 480px){
   /* -------  Navigation ------- */
 
@@ -171,14 +170,19 @@ section.alternate-background {
     display: flex;
     justify-content: space-between;
   }
+  form label {
+    width:fit-content;
+  }
 
   form select,
   form input {
     margin-bottom: 0px;
+    width: 100%;
   }
 
   form div {
     flex-direction: column;
+    width: 15%;
   }
 
   form button {
